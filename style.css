@@ -1,0 +1,22 @@
+.container
+{
+    border: 5px solid black;
+    width: 250px;
+    height: 70px;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 250px;
+    box-shadow: 0 0 10px black;
+    padding-top: 12px;
+    font-weight: 700;
+}
+
+.date
+{
+    font-size: 15px;
+    padding: 5px;
+}

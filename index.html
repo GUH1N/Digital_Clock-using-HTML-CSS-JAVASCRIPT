@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital_clock</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="clock">
+            <span id="hours"></span> :
+            <span id="minutes"></span> :
+            <span id="seconds"></span>
+        </div>
+        <div class="date">
+            <span id="day"></span> .
+            <span id="month"></span> .
+            <span id="year"></span>
+        </div>
+    </div>
+
+    <script>
+        function updateClock() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            var day = now.getDate();
+            var month = now.getMonth();
+            now.getMonth() + 1;
+            var year = now.getFullYear();
+
+            document.getElementById("hours").textContent = formatTime(hours);
+            document.getElementById("minutes").textContent = formatTime(minutes);
+            document.getElementById("seconds").textContent = formatTime(seconds);
+            document.getElementById("day").textContent = formatTime(day);
+            document.getElementById("month").textContent = formatTime(month);
+            document.getElementById("year").textContent = formatTime(year);
+
+        }
+
+        function formatTime(time) {
+            return time < 10 ? "0" + time : time;
+        }
+
+        setInterval(updateClock, 1000);
+        
+    </script>
+</body>
+</html>
